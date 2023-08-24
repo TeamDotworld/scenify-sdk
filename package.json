@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -27,14 +27,10 @@
     "printWidth": 110,
     "arrowParens": "avoid"
   },
-  "name": "@nelie-taylor/scenify-sdk",
-  "author": "Dany Boza <db@backium.co>",
-  "homepage": "https://github.com/scenify/scenify-sdk",
-  "repository": "https://github.com/scenify/scenify-sdk",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  },
+  "name": "@rovahub/scenify-sdk",
+  "author": "RovaHub Technologies <info@rovahub.vn>",
+  "homepage": "https://github.com/ngocquy020196/scenify-sdk",
+  "repository": "https://github.com/ngocquy020196/scenify-sdk",
   "module": "dist/scenify.esm.js",
   "size-limit": [
     {
