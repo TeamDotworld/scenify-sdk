@@ -24,12 +24,10 @@ jobs:
 
     - name: Publish to npm
       run: |
-        npm install
-        npm run build
+        yarn install
+        yarn build
         echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
         npm publish --access public
-      with:
-        node-version: '14'
 
     - name: Create GitHub Release
       uses: actions/create-release@v1
