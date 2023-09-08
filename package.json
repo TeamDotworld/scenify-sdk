@@ -30,8 +30,8 @@
   "name": "@rovahub/scenify-sdk",
   "author": "RovaHub Technologies <info@rovahub.vn>",
   "homepage": "https://github.com/ngocquy020196/scenify-sdk",
-  "repository": "https://github.com/ngocquy020196/scenify-sdk",
-  "module": "dist/scenify.esm.js",
+  "repository":"https://github.com/TeamDotworld/scenify-sdk",
+  "module": "dist/index.js",
   "size-limit": [
     {
       "path": "dist/scenify.cjs.production.min.js",
@@ -62,5 +62,8 @@
     "gsap": "^3.8.0",
     "lodash": "^4.17.21",
     "resize-observer-polyfill": "^1.5.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
