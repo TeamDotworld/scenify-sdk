@@ -34,7 +34,11 @@ export const EditorContext = createContext<IEditorContext>({
   setContextMenuRequest: () => {}
 })
 
-export const EditorProvider: FC = ({ children }) => {
+export interface EditorProviderProps {
+  children: React.ReactNode
+}
+
+export const EditorProvider: FC<EditorProviderProps> = ({ children }:EditorProviderProps) => {
   const [canvas, setCanvas] = useState<fabric.Canvas | null>(null)
   const [activeObject, setActiveObject] = useState<fabric.Object | null>(null)
   const [editor, setEditor] = useState<Editor | null>(null)
