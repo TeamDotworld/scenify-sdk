@@ -27,7 +27,7 @@
     "printWidth": 110,
     "arrowParens": "avoid"
   },
-  "name": "@rovahub/scenify-sdk",
+  "name": "@teamdotworld/scenify-sdk",
   "author": "RovaHub Technologies <info@rovahub.vn>",
   "homepage": "https://github.com/ngocquy020196/scenify-sdk",
   "repository":"https://github.com/TeamDotworld/scenify-sdk",
