@@ -28,7 +28,20 @@ class ExportObject {
       case ObjectType.GROUP:
         object = this[ObjectType.GROUP](item, options, inGroup)
         break
+      case ObjectType.RECT:
+          object = this[ObjectType.RECT](item, options, inGroup)
+          break
     }
+    return object
+  }
+
+  [ObjectType.RECT](item, options, inGroup) {
+    const baseOptions = this.getBaseOptions(item, options, inGroup)
+
+    const object = {
+      ...baseOptions,
+    }
+
     return object
   }
 
