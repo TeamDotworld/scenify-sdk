@@ -41,16 +41,17 @@ class ObjectToFabric {
   [ObjectType.RECT](item, options, inGroup) {
     return new Promise((resolve, reject) => {
       try {
+        const { metadata } = item
         const baseOptions = this.getBaseOptions(item, options, inGroup)
-        console.log(baseOptions)
+        const { fill, stroke } = metadata
         // @ts-ignore
         const element = new fabric.Rect({
           ...baseOptions,
+          ...(fill && {fill}),
+          ...(stroke && {stroke})
         })
-        console.log(element)
         resolve(element)
       } catch (err) {
-        console.error(err)
         reject(err)
       }
     })

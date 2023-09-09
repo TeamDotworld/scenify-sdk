@@ -38,8 +38,15 @@ class ExportObject {
   [ObjectType.RECT](item, options, inGroup) {
     const baseOptions = this.getBaseOptions(item, options, inGroup)
 
+    const {fill, stroke} = item
+    const metadata = {
+      ...item.metadata,
+      fill,
+      stroke
+    }
     const object = {
       ...baseOptions,
+      metadata
     }
 
     return object
