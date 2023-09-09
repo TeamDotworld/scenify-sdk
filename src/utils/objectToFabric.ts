@@ -31,8 +31,30 @@ class ObjectToFabric {
       case ObjectType.GROUP:
         object = await this[ObjectType.GROUP](item, options, inGroup)
         break
+      case ObjectType.RECT:
+          object = await this[ObjectType.RECT](item, options, inGroup)
+          break
     }
     return object
+  }
+  
+  [ObjectType.RECT](item, options, inGroup) {
+    return new Promise((resolve, reject) => {
+      try {
+        const { metadata } = item
+        const baseOptions = this.getBaseOptions(item, options, inGroup)
+        const { keyValues } = metadata
+        // @ts-ignore
+        const element = new fabric.Rect({
+          ...baseOptions,
+          keys: item.keys,
+          keyValues: keyValues ? keyValues : []
+        })
+        resolve(element)
+      } catch (err) {
+        reject(err)
+      }
+    })
   }
 
   [ObjectType.STATIC_TEXT](item, options, inGroup) {

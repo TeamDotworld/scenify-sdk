@@ -22,7 +22,8 @@ export enum ObjectType {
   ACTIVE_SELECTION = 'activeSelection',
   BACKGROUND = 'Background',
   GROUP = 'group',
-  FRAME = 'Frame'
+  FRAME = 'Frame',
+  RECT = "Rect"
 }
 
 export enum ObjectTypeAlt {
