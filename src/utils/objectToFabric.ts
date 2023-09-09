@@ -32,8 +32,8 @@ class ObjectToFabric {
         object = await this[ObjectType.GROUP](item, options, inGroup)
         break
       case ObjectType.RECT:
-          object = await this[ObjectType.RECT](item, options, inGroup)
-          break
+        object = await this[ObjectType.RECT](item, options, inGroup)
+        break
     }
     return object
   }
@@ -42,12 +42,15 @@ class ObjectToFabric {
     return new Promise((resolve, reject) => {
       try {
         const baseOptions = this.getBaseOptions(item, options, inGroup)
+        console.log(baseOptions)
         // @ts-ignore
         const element = new fabric.Rect({
           ...baseOptions,
         })
+        console.log(element)
         resolve(element)
       } catch (err) {
+        console.error(err)
         reject(err)
       }
     })

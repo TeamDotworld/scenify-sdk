@@ -13,7 +13,7 @@ class ObjectHandler extends BaseHandler {
     const { canvas } = this
     const options = this.handlers.frameHandler.getOptions()
     const object: fabric.Object = await objectToFabric.run(item, options)
-    if (this.config.clipToFrame) {
+    if (this.config.clipToFrame && object) {
       const frame = this.handlers.frameHandler.getFrame()
       object.clipPath = frame
     }
