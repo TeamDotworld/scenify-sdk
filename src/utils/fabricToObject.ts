@@ -29,8 +29,8 @@ class ExportObject {
         object = this[ObjectType.GROUP](item, options, inGroup)
         break
       case ObjectType.RECT:
-          object = this[ObjectType.RECT](item, options, inGroup)
-          break
+        object = this[ObjectType.RECT](item, options, inGroup)
+        break
     }
     return object
   }
@@ -38,11 +38,9 @@ class ExportObject {
   [ObjectType.RECT](item, options, inGroup) {
     const baseOptions = this.getBaseOptions(item, options, inGroup)
 
-    const {fill, stroke} = item
     const metadata = {
       ...item.metadata,
-      fill,
-      stroke
+      ...item
     }
     const object = {
       ...baseOptions,
